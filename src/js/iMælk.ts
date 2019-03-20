@@ -1,3 +1,3 @@
 export interface IMælk {
-    MlMælk(): number;
+    mlMælk(): number;
 }
