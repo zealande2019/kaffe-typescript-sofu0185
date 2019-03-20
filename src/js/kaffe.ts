@@ -4,5 +4,5 @@ export abstract class Kaffe {
         this.rabat = rabat;
     }
     abstract pris(): number;
-    styrke(): string { return "Mild" }
+    styrke(): string { return "Stærk" }
 }
