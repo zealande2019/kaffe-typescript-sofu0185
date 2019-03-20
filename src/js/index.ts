@@ -1,12 +1,10 @@
-interface Person {
-    firstName: string;
-    lastName: string;
-}
+import { Kaffe } from './kaffe';
+import { Cortado } from './cortado';
 
-function greeter(person: Person): string {
-    return "Hello, " + person.firstName + " " + person.lastName;
-}
-let user: Person = { firstName: "John", lastName: "Doe" };
 
-let element: HTMLDivElement = <HTMLDivElement> document.getElementById("content");
-element.innerHTML = greeter(user);
+let kaffer: Kaffe[] = []
+kaffer.push(new Cortado());
+
+kaffer.forEach(element => {
+    console.log(`Rabat: ${element.rabat}; Pris: ${element.pris}; Styrke: ${element.styrke}`);
+});
