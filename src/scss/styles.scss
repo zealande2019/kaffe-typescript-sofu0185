@@ -13,3 +13,19 @@ h2
 h1{
     @extend h2;
 }
+
+#menuKort {
+    list-style-type: none;
+    padding-left: 0px;
+
+    .kaffe {
+        border: 1px solid black;
+        text-align: center;
+        padding: 10px;
+        margin: 2px 0px;
+
+        span {
+            margin: 0px 10px
+        }
+    }
+}
