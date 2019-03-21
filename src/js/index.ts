@@ -10,5 +10,5 @@ kaffer.push(new Latte());
 kaffer.push(new SortKaffe(4));
 
 kaffer.forEach(element => {
-    console.log(`Rabat: ${element.rabat}; Pris: ${element.pris()}; Styrke: ${element.styrke()}`);
+    console.log(`Kaffe drik: ${element.kaffeDrik()}; Rabat: ${element.rabat}; Pris: ${element.pris()}; Styrke: ${element.styrke()}`);
 });

@@ -2,6 +2,9 @@ import { Kaffe } from './kaffe'
 import { IMælk } from './iMælk'
 
 export class Latte extends Kaffe implements IMælk {
+    kaffeDrik(): string {
+        return 'Latte';
+    }
     constructor(){ 
         super(0)
     }

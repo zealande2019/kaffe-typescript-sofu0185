@@ -5,4 +5,5 @@ export abstract class Kaffe {
     }
     abstract pris(): number;
     styrke(): string { return "Stærk" }
+    abstract kaffeDrik(): string;
 }
