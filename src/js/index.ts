@@ -9,7 +9,8 @@ kaffer.push(new Cortado());
 kaffer.push(new Latte());
 kaffer.push(new SortKaffe(4));
 
-let list: HTMLElement = document.getElementById('menuKort');
+let menu: HTMLElement = document.getElementById('menukort');
+let bestillinger: HTMLElement = document.getElementById('bestillingsliste');
 
 kaffer.forEach(element => {
     console.log(element.kaffeInfo());
@@ -38,6 +39,31 @@ kaffer.forEach(element => {
     newKaffe.appendChild(kaffeType);
     newKaffe.appendChild(kaffeRabat);
 
-    list.appendChild(newKaffe);
+    menu.appendChild(newKaffe);
 });
 
+menu.addEventListener('click', function(e: MouseEvent){
+    let target: HTMLElement = <HTMLElement>e.target;
+
+    switch(target.tagName){
+        case 'SPAN':
+            bestillinger.appendChild(target.parentElement.cloneNode(true));
+            break;
+        case 'LI':
+            bestillinger.appendChild(target.cloneNode(true));
+            break;
+    }
+});
+
+bestillinger.addEventListener('click', function(e){
+    let target: HTMLElement = <HTMLElement>e.target;
+
+    switch(target.tagName){
+        case 'SPAN':
+            bestillinger.removeChild(target.parentElement);
+            break;
+        case 'LI':
+            bestillinger.removeChild(target);
+            break;
+    }
+});
